@@ -1,13 +1,21 @@
+// src/App.js
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import DataLoader from './components/DataLoader';
+import CategoryDistributionChart from './components/CategoryDistributionChart';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-     hi
-    </div>
+    <Provider store={store}>
+      <div>
+        <DataLoader />
+        <h1>Category Distribution Chart</h1>
+        <CategoryDistributionChart />
+        {/* Add other chart components here */}
+      </div>
+    </Provider>
   );
-}
+};
 
 export default App;
