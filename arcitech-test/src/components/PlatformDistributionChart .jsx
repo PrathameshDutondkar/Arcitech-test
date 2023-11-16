@@ -8,6 +8,7 @@ const PlatformDistributionChart = () => {
   const platformData = usageStatistics?.by_platform || [];
 
   return (
+    <> <h2>Platform Distribution Chart</h2>
     <BarChart width={600} height={400} data={Object.entries(platformData)}>
       <XAxis dataKey="[0]" />
       <YAxis />
@@ -15,6 +16,7 @@ const PlatformDistributionChart = () => {
       <Legend />
       <Bar dataKey="[1]" fill="#8884d8" />
     </BarChart>
+    </>
   );
 };
 

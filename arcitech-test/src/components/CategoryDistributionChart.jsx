@@ -19,6 +19,7 @@ const CategoryDistributionChart = () => {
   console.log("***************", categoryDistribution);
 
   return (
+    <><h2>Category Distribution Chart</h2>
     <BarChart width={600} height={400} data={categoryDistribution}>
       <XAxis dataKey="category" />
       <YAxis />
@@ -26,6 +27,7 @@ const CategoryDistributionChart = () => {
       <Legend />
       <Bar dataKey="count" fill="#8884d8" />
     </BarChart>
+    </>
   );
 };
 

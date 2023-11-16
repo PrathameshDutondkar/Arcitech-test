@@ -15,7 +15,6 @@ const App = () => {
     <Provider store={store}>
       <div className='container'>
         <DataLoader />
-        <h1>Category Distribution Chart</h1>
         <CategoryDistributionChart />
         <ResponseTimesChart></ResponseTimesChart>
         <UserSatisfactionChart></UserSatisfactionChart>

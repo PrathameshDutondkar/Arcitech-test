@@ -8,6 +8,8 @@ const UserSatisfactionChart = () => {
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#AF19FF'];
 
   return (
+    <>
+    <h2>User Satisfaction Chart</h2>
     <PieChart width={600} height={400}>
       <Pie
         data={userSatisfaction?.ratings}
@@ -27,6 +29,7 @@ const UserSatisfactionChart = () => {
       <Tooltip />
       <Legend />
     </PieChart>
+    </>
   );
 };
 
