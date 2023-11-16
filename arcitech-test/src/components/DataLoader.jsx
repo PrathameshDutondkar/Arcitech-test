@@ -7,7 +7,7 @@ const DataLoader = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Fetch data from your API here (simulating API call with mock data)
+    
     const mockData = {
         "insight_summary": {
           "total_queries": 1500,
@@ -62,11 +62,11 @@ const DataLoader = () => {
         }
       };
 
-    // Dispatch the action to store the data in Redux
+    
     dispatch(setData(mockData));
   }, [dispatch]);
 
-  return null; // This component doesn't render anything
+  return null; 
 };
 
 export default DataLoader;

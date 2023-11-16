@@ -1,4 +1,4 @@
-// src/App.js
+
 import React from 'react';
 import { Provider } from 'react-redux';
 import store from './redux/store';
@@ -12,7 +12,7 @@ const App = () => {
         <DataLoader />
         <h1>Category Distribution Chart</h1>
         <CategoryDistributionChart />
-        {/* Add other chart components here */}
+        
       </div>
     </Provider>
   );
