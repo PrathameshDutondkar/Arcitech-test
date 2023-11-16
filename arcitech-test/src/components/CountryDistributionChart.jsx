@@ -1,12 +1,14 @@
-// Import necessary components from Recharts
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 
 const CountryDistributionChart = () => {
-  const usageStatistics = useSelector((state) => state.usage_statistics);
+  const usageStatistics = useSelector((state) => state?.usage_statistics);
+
+  const countryData = usageStatistics?.by_country || {};
 
   return (
-    <BarChart width={600} height={400} data={Object.entries(usageStatistics.by_country)}>
+    <BarChart width={600} height={400} data={Object.entries(countryData)}>
       <XAxis dataKey="[0]" />
       <YAxis />
       <Tooltip />

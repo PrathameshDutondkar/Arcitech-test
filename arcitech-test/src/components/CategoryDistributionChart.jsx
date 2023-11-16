@@ -1,4 +1,3 @@
-// src/components/CategoryDistributionChart.js
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
@@ -6,10 +5,15 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 const CategoryDistributionChart = () => {
   const categoryDistribution = useSelector((state) => {
     const distributionData = state.category_distribution;
-    return Object.keys(distributionData).map((category) => ({
-      category,
-      count: distributionData[category],
-    }));
+
+    if (distributionData) {
+      return Object.keys(distributionData).map((category) => ({
+        category,
+        count: distributionData[category],
+      }));
+    }
+
+    return [];
   });
 
   console.log("***************", categoryDistribution);

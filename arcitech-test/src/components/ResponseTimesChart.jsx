@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 
 const ResponseTimesChart = () => {
-  const responseTimes = useSelector((state) => state.response_times);
+  const responseTimes = useSelector((state) => state?.response_times);
 
   return (
-    <LineChart width={600} height={400} data={responseTimes.day_wise}>
+    <LineChart width={600} height={400} data={responseTimes?.day_wise} >
       <XAxis dataKey="date" />
       <YAxis />
       <Tooltip />

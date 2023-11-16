@@ -8,11 +8,12 @@ import ResponseTimesChart from './components/ResponseTimesChart';
 import UserSatisfactionChart from './components/UserSatisfactionChart ';
 import PlatformDistributionChart from './components/PlatformDistributionChart ';
 import CountryDistributionChart from './components/CountryDistributionChart';
+import "./App.css"
 
 const App = () => {
   return (
     <Provider store={store}>
-      <div>
+      <div className='container'>
         <DataLoader />
         <h1>Category Distribution Chart</h1>
         <CategoryDistributionChart />
