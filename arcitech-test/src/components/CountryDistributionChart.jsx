@@ -19,7 +19,7 @@ const CountryDistributionChart = () => {
         </YAxis>
         <Tooltip />
         <Legend />
-        <Bar dataKey="[1]" fill="#8884d8" />
+        <Bar dataKey="[1]" fill="#8884d8" /> 
       </BarChart>
     </>
   );
